@@ -23,4 +23,7 @@
 <glyph unicode="&#x2007;" horiz-adv-x="216" />
 <glyph unicode="&#x2008;" horiz-adv-x="162" />
 <glyph unicode="&#x2009;" horiz-adv-x="260" />
-<glyph u
+<glyph unicode="&#x200a;" horiz-adv-x="72" />
+<glyph unicode="&#x202f;" horiz-adv-x="260" />
+<glyph unicode="&#x205f;" horiz-adv-x="325" />
+<glyph unicode="&#x20ac;" d="M744 1198q242 0 354 -189q60 -104 66 -209h-181q0 45 -17.5 82.5t-43.5 61.5t-58 40.5t-60.5 24t-51.5 7.5q-19 0 -40.5 -5.5t-49.5 -20.5t-53 -38t-49 -62.5t-39 -89.5h379l-100 -100h-300q-6 -50 -6 -100h406l-100 -100h-300q9 -74 33 -132t52.5 -91t61.5 -54.5t59 -29 
