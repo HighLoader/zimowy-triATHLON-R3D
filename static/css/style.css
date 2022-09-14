@@ -52,4 +52,20 @@ nav.navbar.navbar-default.chn-gd{
 	padding-left: 40px;
 }
 .navbar-default .navbar-nav>li{
-	border-right:1px solid rg
+	border-right:1px solid rgba(48, 155, 190, 0.44);
+	padding: 0px 5px 0px;
+}
+.navbar-default .navbar-nav>li:nth-child(5){
+	border-right:none;
+}
+.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a{
+	padding: 4px 12px;
+	color: #309BBE !important;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 500;
+	font-size: 16px;
+}
+.carousel-indicators .active {
+	background-color: #064042 !important;
+}
+.carousel-indicators li {
