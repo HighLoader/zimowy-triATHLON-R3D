@@ -29,4 +29,27 @@ body{
 }
 .navbar-header a.navbar-brand.logo-st,.navbar-header a.navbar-brand.logo-st:hover{
 	font-family: 'Roboto Slab', serif;
-	font-weight:7
+	font-weight:700;
+	font-size: 35px;
+	text-decoration:none;
+	color:#309BBE;
+	margin-top: 2px;
+}
+nav.navbar.navbar-default.chn-gd{
+	background-color: #fff;
+	border-bottom: 1px solid #EBEBEB;
+	padding: 1em 0em;
+	margin: 0;
+}
+.icn_pos {
+	font-size: 16px;
+	padding-left:20px;
+}
+.icn_pos.hm{
+	padding-left:12px;
+}
+.icn_pos.hm2 {
+	padding-left: 40px;
+}
+.navbar-default .navbar-nav>li{
+	border-right:1px solid rg
