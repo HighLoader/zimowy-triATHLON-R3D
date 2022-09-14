@@ -110,4 +110,33 @@ a.right.carousel-control {
 a.left.carousel-control {
 	background: none !important;
 }
-button.btn.btn-info
+button.btn.btn-info.sld {
+	width: 12%;
+	padding: 8px 0px;
+	border-radius: 2px;
+	outline:none;
+	border:none !important;
+	background:rgba(3, 3, 3, 0.83);
+}
+button.btn.btn-info.sld:hover {
+	padding: 8px 0px;
+	background: #fff;
+	color: #000;
+	transition: 0.5s all;
+}
+.style-label{
+	text-align:center;
+}
+.style-label{
+	padding: 3em 0em;
+}
+/*--box_effect--*/
+ul.box-shadow li {
+	text-align:center;
+	position:relative;
+	top:55px;
+}
+ul.box-shadow{
+	width:100%;
+	height:250px;
+	back
