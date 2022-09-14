@@ -139,4 +139,26 @@ ul.box-shadow li {
 ul.box-shadow{
 	width:100%;
 	height:250px;
-	back
+	background:#064042;
+	margin:40px auto;
+}
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after{
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 15px;
+	left: 10px;
+	width: 50%;
+	top: 80%;
+	max-width:300px;
+	background: #777;
+	-webkit-box-shadow: 0 15px 10px #777;
+	-moz-box-shadow: 0 15px 10px #777;
+	box-shadow: 0 15px 10px #777;
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(
