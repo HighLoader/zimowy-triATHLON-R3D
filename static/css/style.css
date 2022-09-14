@@ -8,4 +8,25 @@ h4, h5, h6,
 h1, h2, h3 {margin: 0;}
 ul, ol, li{margin: 0;}
 p {margin: 0;}
-bo
+body{
+	margin:0;
+	padding:0;
+}
+/*--fonts--*/
+@font-face{
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+.header-top{
+	background:#141127;
+	padding: 1em 0em;
+}
+.header-top p{
+	font-family: 'Monda', sans-serif;
+	font-size:16px;
+	font-weight:400;
+	color:#fff;
+}
+.navbar-header a.navbar-brand.logo-st,.navbar-header a.navbar-brand.logo-st:hover{
+	font-family: 'Roboto Slab', serif;
+	font-weight:7
