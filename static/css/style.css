@@ -182,4 +182,30 @@ ul.box-shadow{
 	font-size: 20px;
 }
 .label-text p {
-	font-family: 'Monda', sans-ser
+	font-family: 'Monda', sans-serif;
+	font-size: 15px;
+	font-weight: 100;
+	color: #fff;
+}
+/*--box_effect--*/
+.style-label ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.style-label ul li{
+	list-style-type:none;
+	margin:0;
+	padding:0px 20px;
+}
+.flt {
+	font-size: 20px;
+	background: #F9FBFC;
+	border-radius: 50%;
+	padding: 15px;
+	color: #309BBE;
+	margin-bottom: 15px;
+}
+.flt:hover {
+	-webkit-transform: rotatey(360deg);
+	-o-transform: rotatey(360deg);
