@@ -209,3 +209,26 @@ ul.box-shadow{
 .flt:hover {
 	-webkit-transform: rotatey(360deg);
 	-o-transform: rotatey(360deg);
+	-moz-transform: rotatey(360deg);
+	transition: 0.5s all;
+	cursor: pointer;
+}
+/*--services--*/
+.service_features {
+	padding: 0em 0em 3em;
+}
+.ser-fet h3 {
+	color: #309BBE;
+	font-weight: 700;
+	font-family: 'Roboto Slab', serif;
+	margin-bottom: 5px;
+	font-size: 30px;
+}
+.ser-fet p{
+	font-family: 'Monda', sans-serif;
+	font-size: 18px;
+	font-weight: 100;
+	color: #000;
+	padding-bottom: 5px;
+}
+span.li
