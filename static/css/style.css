@@ -231,4 +231,27 @@ ul.box-shadow{
 	color: #000;
 	padding-bottom: 5px;
 }
-span.li
+span.line {
+	height: 1px;
+	background-color: #064042;
+	display: block;
+	width: 7%;
+}
+li.subitem1 p{
+	font-family: 'Monda', sans-serif !important;
+	font-size: 12.5px !important;
+	font-weight: 100 !important;
+	color: #787B7C !important;
+	line-height:1.8em !important;
+	padding-left: 25px;
+}
+/*--style for menu-drop--*/
+.menu-grid{
+	margin-top:30px;
+}
+.menu_drop {
+	background:#fff;
+	width: auto;
+	height: auto;
+	padding: 0;
+	list-style: none;
