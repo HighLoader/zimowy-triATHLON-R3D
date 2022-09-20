@@ -304,4 +304,32 @@ ul {
 	font-size: 24px;
 	cursor: pointer;
 }
-.aim-icn:hover
+.aim-icn:hover {
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	transition: 0.5s all ease-in-out;
+}
+.fet-pad {
+	padding:0px 0px 0px 0px;
+}
+.wid {
+	width: 20%;
+}
+.div-margin {
+	padding-bottom: 35px;
+}
+.div-margin h4 {
+	font-weight: 500;
+	font-size:17px;
+	font-family: 'Roboto Slab', serif;
+	color:#309BBE;
+	margin-bottom: 6px;
+}
+.div-margin p {
+	font-size: 12.5px;
+	font-weight: 100;
+	color: #787B7C;
+	line-height: 1.6em;
+}
+/*--style_fo
