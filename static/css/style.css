@@ -280,4 +280,28 @@ ul {
 	padding: 6px 0;
 	text-indent: 50px;
 	display: block;
-	position: r
+	position: relative;
+	font-size: 15px;
+	font-weight: 400;
+	color: #625548;
+	text-decoration: none;
+}
+.menu_drop ul li a:hover {
+	color:#a6192e;
+}
+.menu_drop > li > a:hover, .menu > li > a.active {
+	color: #F8FDFD;
+	background: #064042;
+}
+.features {
+	margin-top: 30px;
+}
+.aim-icn {
+	color: #FFFFFF;
+	background: #064042;
+	padding: 15px 15px;
+	border-radius: 2px;
+	font-size: 24px;
+	cursor: pointer;
+}
+.aim-icn:hover
