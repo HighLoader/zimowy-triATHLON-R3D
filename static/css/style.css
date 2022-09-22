@@ -332,4 +332,30 @@ ul {
 	color: #787B7C;
 	line-height: 1.6em;
 }
-/*--style_fo
+/*--style_for_menudrop--*/
+/*--acheivements--*/
+.acheivments {
+	padding:0em 0em 3em;
+}
+.top {
+	text-align: center;
+}
+.top>h3{
+	color: #309BBE;
+	font-weight: 700;
+	font-family: 'Roboto Slab', serif;
+	margin-bottom: 5px;
+	font-size: 30px;
+}
+.top>p{
+	font-family: 'Monda', sans-serif;
+	font-size: 15px;
+	font-weight: 100;
+	color: #000;
+ }
+.gallery-grids {
+	margin-top: 3em;
+}
+.gallery-grids ul{
+	list-style-type:none;
+	margin:0;
