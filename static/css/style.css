@@ -359,3 +359,29 @@ ul {
 .gallery-grids ul{
 	list-style-type:none;
 	margin:0;
+	padding:0;
+}
+.gallery-grids ul li{
+	margin:0px 20px 20px 0px;
+	padding:0;
+}
+.gal-alt img {
+	width: 100%;
+	border-radius: 2px;
+}
+.gal-alt {
+	position: relative;
+	width: 31.333333%;
+}
+span.hide-box {
+	background: rgba(121, 207, 209, 0.63);
+	position: absolute;
+	z-index: 9;
+	display: none;
+	width: 100%;
+	padding: 97px 0px;
+	text-align: center;
+	top: 0;
+	border-radius: 2px;
+}
+.gal-alt:hover span.hide-box 
