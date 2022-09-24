@@ -384,4 +384,29 @@ span.hide-box {
 	top: 0;
 	border-radius: 2px;
 }
-.gal-alt:hover span.hide-box 
+.gal-alt:hover span.hide-box {
+	display: block;
+	transition:0.5s all ease;
+}
+span.hide-box h4{
+	font-weight: 500;
+	font-size: 18px;
+	font-family: 'Roboto Slab', serif;
+	color: #fff;
+	margin-bottom: 6px;
+}
+span.hide-box p{
+	font-size: 15px;
+	font-weight: 100;
+	color: #fff;
+	line-height: 1.3em;
+}
+/*--doctor--*/
+.doctor-port {
+	padding: 0em 0em 3em;
+	text-align: center;
+}
+.doctor-port h3{
+	color: #309BBE;
+	font-weight: 700;
+	font-family: 'Roboto Slab', 
