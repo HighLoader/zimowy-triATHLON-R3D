@@ -409,4 +409,28 @@ span.hide-box p{
 .doctor-port h3{
 	color: #309BBE;
 	font-weight: 700;
-	font-family: 'Roboto Slab', 
+	font-family: 'Roboto Slab', serif;
+	margin-bottom: 1.5em;
+	font-size: 35px;
+}
+/*-- caption-css --*/
+.g1{
+	position:relative;
+	margin-right: 15px;
+}
+.g1:hover div.caption{
+	display:block;
+	transform:;
+}
+.caption{
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	z-index: 999;
+	background:rgba(121, 207, 209, 0.63);
+	padding:0.8em 0.5em;
+	transition: all 0.8s ease;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	-ms-transition: all 0.8s ease;
