@@ -434,3 +434,32 @@ span.hide-box p{
 	-moz-transition: all 0.8s ease;
 	-o-transition: all 0.8s ease;
 	-ms-transition: all 0.8s ease;
+	transform-style:preserve-3d;
+	display:none;
+}
+.caption h4{
+	font-weight: 500;
+	font-size: 18px;
+	font-family: 'Roboto Slab', serif;
+	color: #309BBE;
+}
+.caption span{
+	font-weight: 100;
+	color: #fff;
+	margin:0;
+	padding:0;
+	font-size:0.875em;
+}
+.social-label{
+	padding:0em 0em;
+	margin:0;
+}
+.text-label{
+	background:#309BBE;
+	padding: 36px 83px;
+}
+.text-label{
+	font-family: 'Monda', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #
