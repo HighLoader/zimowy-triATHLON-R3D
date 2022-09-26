@@ -462,4 +462,31 @@ span.hide-box p{
 	font-family: 'Monda', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	color: #
+	color: #fff;
+}
+.social-icn{
+	background:#064042;
+	padding: 30px 0px 25px;
+}
+.social-icn ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	float: right;
+}
+.social-icn ul li{
+	margin:0px;
+	padding: 0px 43px;
+	display:inline;
+}
+.social-icn ul li a{
+	background: url(../images/social.png);
+	width: 35px;
+	background-size: 211px;
+	height: 34px;
+	display: inline-block;
+}
+.social-icn ul li a.face{
+	background-position: 0px 34px;
+}
+.social-icn
