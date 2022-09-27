@@ -508,4 +508,27 @@ span.hide-box p{
 	background-position: -35px 34px;
 }
 .social-icn ul li a.inst:hover{
-	background-position: -35p
+	background-position: -35px 68px;
+}
+.social-icn ul li a.drib{
+	background-position: 70px 34px;
+	width: 36px;
+}
+.social-icn ul li a.drib:hover{
+	background-position: 70px 68px;
+	width: 36px;
+}
+.social-icn ul li a.in{
+	background-position: 35px 34px;
+}
+.social-icn ul li a.in:hover{
+	background-position:35px 68px;
+}
+/*--contact--*/
+.map {
+	margin: 0px 0px 0px;
+	padding: 0;
+	border-bottom: 4px solid #309BBE;
+}
+.map iframe {
+	width: 100
