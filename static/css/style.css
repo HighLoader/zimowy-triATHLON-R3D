@@ -489,4 +489,23 @@ span.hide-box p{
 .social-icn ul li a.face{
 	background-position: 0px 34px;
 }
-.social-icn
+.social-icn ul li a.face:hover{
+	background-position: 0px 68px;
+}
+.social-icn ul li a.twit{
+	background-position: -71px 34px;
+}
+.social-icn ul li a.twit:hover{
+	background-position: -71px 68px;
+}
+.social-icn ul li a.gplus{
+	background-position: -106px 34px;
+}
+.social-icn ul li a.gplus:hover{
+	background-position: -106px 68px;
+}
+.social-icn ul li a.inst{
+	background-position: -35px 34px;
+}
+.social-icn ul li a.inst:hover{
+	background-position: -35p
