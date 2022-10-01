@@ -556,4 +556,29 @@ span.hide-box p{
 }
 .news-letter p {
 	font-family: 'Monda', sans-serif;
-	font-size
+	font-size: 13.5px;
+	font-weight: 100;
+	color: #fff;
+	margin-bottom: 10px;
+}
+input.mail {
+	padding: 5px 10px;
+	border: none;
+	font-family: 'Monda', sans-serif;
+	font-size: 12.5px;
+	outline:none;
+	width:69.5%;
+	color: #ABA5A5;
+}
+.sub1 {
+	padding: 0px 15px;
+	border-radius: 0;
+	font-size: 12.5px;
+	font-family: 'Monda', sans-serif;
+	border: none;
+	height: 31px;
+	margin-bottom: 1px;
+}
+.sub1:hover,.sub1:active,.sub1:focus{
+	border: none;
+	outline
