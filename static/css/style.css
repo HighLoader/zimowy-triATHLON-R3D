@@ -630,4 +630,31 @@ input.nuber {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 700;
 	font-size: 35px;
-	text-decorati
+	text-decoration: none;
+	color: #fff;
+	margin-bottom: 10px;
+}
+.footer-text p{
+	margin-top: 10px;
+	color: #fff;
+	font-family: 'Monda', sans-serif;
+	font-size: 14px;
+	font-weight: 100;
+}
+.footer-text p a{
+	color:#fff;
+}
+.footer-text p a:hover{
+	color:#E2E027;
+	text-decoration:none;
+}
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	overflow: hidden;
+	width: 48px;
+	height: 48px;
+	border: none;
