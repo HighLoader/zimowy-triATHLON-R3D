@@ -581,4 +581,30 @@ input.mail {
 }
 .sub1:hover,.sub1:active,.sub1:focus{
 	border: none;
-	outline
+	outline:none;
+	padding: 0px 15px;
+	height: 31px;
+	margin-bottom: 1px;
+}
+.contact-us textarea {
+	width: 75%;
+	resize: none;
+	min-height: 46px;
+	padding: 7px 10px;
+	border: none;
+	font-family: 'Monda', sans-serif;
+	font-size: 12.5px;
+	outline:none;
+	color: #ABA5A5;
+}
+input.name{
+	padding: 7px 10px;
+	border: none;
+	font-family: 'Monda', sans-serif;
+	font-size: 12.5px;
+	height: 29px;
+	outline:none;
+	width:32.5%;
+	color: #ABA5A5;
+}
+input.
