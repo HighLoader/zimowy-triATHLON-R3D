@@ -607,4 +607,27 @@ input.name{
 	width:32.5%;
 	color: #ABA5A5;
 }
-input.
+input.nuber {
+	padding: 7px 10px;
+	border: none;
+	font-family: 'Monda', sans-serif;
+	font-size: 12.5px;
+	height: 29px;
+	outline:none;
+	width:32.5%;
+	color: #ABA5A5;
+}
+/*--contact--*/
+/*--footer--*/
+.footer{
+	background:#042631;
+	padding:2em 0em;
+}
+.footer-text{
+	text-align:center;
+}
+.footer-text h3 a,.footer-text h3 a:hover{
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	font-size: 35px;
+	text-decorati
