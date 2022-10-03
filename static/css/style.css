@@ -704,4 +704,23 @@ input.nuber {
 		font-size: 25px;
 		width: 60%;
 	}
-	.navbar-
+	.navbar-header a.navbar-brand.logo-st, .navbar-header a.navbar-brand.logo-st:hover {
+		font-family: 'Roboto Slab', serif;
+		font-weight: 700;
+		font-size: 33px;
+	}
+	.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a {
+		padding: 6px 7px;
+		font-size: 14px;
+	}
+	.navbar-default .navbar-nav>li {
+		padding: 0px 0px 0px;
+	}
+	.menu-grid {
+		margin-top: 30px;
+		text-align: left;
+	}
+	.icn_pos {
+		font-size: 13px;
+	}
+	ul.box-sh
