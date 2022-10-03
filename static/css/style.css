@@ -658,3 +658,25 @@ input.nuber {
 	width: 48px;
 	height: 48px;
 	border: none;
+	text-indent: 100%;
+	background: url(../images/scroll-top.png) no-repeat 0px 0px;
+}
+/*--responsivestarts-here--*/
+@media screen and (max-width:1024px){
+	.carousel-caption h3 {
+		font-size: 28px;
+		width: 60%;
+	}
+	.carousel-caption p {
+		font-size: 13px;
+		width: 53%;
+	}
+	button.btn.btn-info.sld,button.btn.btn-info.sld:hover {
+		padding: 5px 13px !important;
+		font-size: 12px;
+		width: 20%;
+	}
+	.gal-alt {
+		width: 30.333333%;
+	}
+	span.hide-box {
