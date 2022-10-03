@@ -680,3 +680,28 @@ input.nuber {
 		width: 30.333333%;
 	}
 	span.hide-box {
+		padding: 73px 0px;
+	}
+	.text-label {
+		padding: 36px 44px;
+	}
+	.ser-fet h3,.ser-fet h3,.top>h3,.doctor-port h3 {
+		font-size: 28px;
+	}
+	.ser-fet p,.ser-fet p {
+		font-family: 'Monda', sans-serif;
+		font-size: 16px;
+	}
+	.div-margin p {
+		font-size: 12.5px;
+	}
+	.social-icn ul li {
+		padding: 0px 36px;
+	}
+}
+@media screen and (max-width:768px){
+	.carousel-caption h3 {
+		font-size: 25px;
+		width: 60%;
+	}
+	.navbar-
