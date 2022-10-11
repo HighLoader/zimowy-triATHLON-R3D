@@ -812,3 +812,21 @@ input.nuber {
 		padding-left: 2px;
 	}
 	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #309BBE;
+	}
+	.navbar-default .navbar-toggle {
+		border: none !important;
+	}
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+		background-color: #FCFCFC !important;
+	}
+	.navbar-header a.navbar-brand.logo-st, .navbar-header a.navbar-brand.logo-st:hover{
+		margin:0;
+	}
+	.carousel-caption h3 {
+		font-size: 18px;
+		width: 70%;
+	}
+	.carousel-caption p {
+		font-size: 13px;
+		
