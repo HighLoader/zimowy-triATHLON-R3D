@@ -754,4 +754,36 @@ input.nuber {
 		text-align: left;
 	}
 	.col-md-4.ser-fet {
-		margin-bott
+		margin-bottom: 3em;
+	}
+	.gal-alt {
+		width: 30.333333%;
+		float: left;
+	}
+	span.hide-box h4 {
+		font-size: 14px;
+	}
+	span.hide-box p {
+		font-size: 12px;
+	}
+	span.hide-box {
+		padding: 55px 0px;
+	}
+	.text-label {
+		padding:30px 12px;
+		width: 30%;
+		float: left;
+		font-size: 13px;
+	}
+	.social-icn ul li {
+		padding: 0px 24px;
+	}
+	.social-icn {
+		width:70%;
+		float:right;
+		background: #064042;
+		padding: 24px 0px 15px;
+	}
+	.pd {
+		float: left;
+		w
