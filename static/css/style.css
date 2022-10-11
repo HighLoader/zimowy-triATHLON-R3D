@@ -723,4 +723,35 @@ input.nuber {
 	.icn_pos {
 		font-size: 13px;
 	}
-	ul.box-sh
+	ul.box-shadow {
+		width: 100%;
+		height: 270px;
+	}
+	.style-label ul li {
+		margin: 0px 3px 0px;
+		padding: 0px 0px 0px;
+		width: 24%;
+		float: left;
+	}
+	.service_features {
+		text-align: center;
+	}
+	span.line {
+		margin: 0 auto;
+	}
+	.wid {
+		width: 20%;
+		float: left;
+	}
+	.wid2 {
+		padding: 0;
+		width: 80%;
+		float: right;
+	}
+	.col-md-6.fet-pad {
+		width: 50%;
+		float: left;
+		text-align: left;
+	}
+	.col-md-4.ser-fet {
+		margin-bott
