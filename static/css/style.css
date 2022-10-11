@@ -786,4 +786,29 @@ input.nuber {
 	}
 	.pd {
 		float: left;
-		w
+		width: 33.333333%;
+	}
+	.contact-us textarea {
+		width: 100%;
+	}
+	input.name, input.nuber {
+		width: 49%;
+		float: left;
+		margin-right: 2px;
+		margin-bottom: 5px;
+	}
+}
+@media screen and (max-width:640px){
+	.navbar-default .navbar-nav>li {
+		text-align: center;
+	}
+	.icn_pos.hm {
+		padding-left: 0px;
+	}
+	.icn_pos {
+		padding-left: 1px;
+	}
+	.icn_pos.hm2 {
+		padding-left: 2px;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
