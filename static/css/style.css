@@ -829,4 +829,36 @@ input.nuber {
 	}
 	.carousel-caption p {
 		font-size: 13px;
-		
+		width: 91%;
+	}
+	.style-label ul li {
+		margin: 0px 3px 0px;
+		width: 32%;
+	}
+	.style-label ul li:nth-child(4){
+		display:none;
+	}
+	.wid2 {
+		padding: 0px 20px;
+	}
+	.gal-alt {
+		width: 46%;
+		float: left;
+		margin: 0px 10px 20px !important;
+	}
+	span.hide-box {
+		padding: 73px 0px;
+	}
+	.social-icn ul li {
+		padding: 0px 16px;
+	}
+	.text-label {
+		padding: 21px 12px;
+	}
+	input.name, input.nuber {
+		width: 100%;
+		float: left;
+		margin-bottom: 5px;
+	}
+}
+@media scr
