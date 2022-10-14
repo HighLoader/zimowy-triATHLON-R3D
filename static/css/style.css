@@ -961,4 +961,27 @@ input.nuber {
 		font-size: 20px;
 		margin-bottom: 8px;
 	}
-	.adress ul li,.news-letter
+	.adress ul li,.news-letter p{
+		font-size: 12px;
+	}
+	.contact-us textarea {
+		width: 100%;
+		min-height: 80px;
+	}
+}
+@media screen and (max-width:384px){
+	.navbar-header a.navbar-brand.logo-st, .navbar-header a.navbar-brand.logo-st:hover {
+		font-size: 26px;
+	}
+	nav.navbar.navbar-default.chn-gd {
+		padding: 0.5em 0em;
+	}
+	.carousel-caption h3 {
+		font-size: 14px;
+		width: 90%;
+		margin: 0px 0px 5px;
+		padding: 6px 10px;
+	}
+	.carousel-caption p {
+		font-size: 11px;
+		width
