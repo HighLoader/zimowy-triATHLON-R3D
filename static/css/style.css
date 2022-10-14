@@ -909,4 +909,28 @@ input.nuber {
 		font-size: 24px;
 	}
 	.ser-fet p, .ser-fet p {
-		font-fa
+		font-family: 'Monda', sans-serif;
+		font-size: 14px;
+	}
+	.service_features {
+		padding: 0em 0em 2em;
+	}
+	.col-md-4.ser-fet {
+		margin-bottom: 2em;
+	}
+	.div-margin {
+		padding-bottom: 1em;
+	}
+	.menu_drop > li > a,.div-margin h4{
+		font-size: 14px;
+	}
+	li.subitem1 p {
+		font-size: 12px 
+	}
+	.ser-fet p, .ser-fet p {
+		font-size: 12px;
+	}
+	.gal-alt {
+		width: 47%;
+		float: left;
+		margin: 0px 5px 10px !imp
