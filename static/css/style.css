@@ -861,4 +861,23 @@ input.nuber {
 		margin-bottom: 5px;
 	}
 }
-@media scr
+@media screen and (max-width:480px){
+	.header-top p {
+		font-family: 'Monda', sans-serif;
+		font-size: 12px;
+	}
+	.navbar-header a.navbar-brand.logo-st, .navbar-header a.navbar-brand.logo-st:hover {
+		font-size: 30px;
+	}
+	.carousel-caption h3 {
+		font-size: 14px;
+		width: 80%;
+		margin: 0px 0px 5px;
+	}
+	.carousel-caption p {
+		font-size: 11px;
+		width: 104%;
+		margin: 0px 0px 5px;
+	}
+	button.btn.btn-info.sld, button.btn.btn-info.sld:hover {
+		padding: 3px 3px !import
