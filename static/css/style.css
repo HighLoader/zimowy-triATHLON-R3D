@@ -933,4 +933,32 @@ input.nuber {
 	.gal-alt {
 		width: 47%;
 		float: left;
-		margin: 0px 5px 10px !imp
+		margin: 0px 5px 10px !important;
+	}
+	span.hide-box {
+		padding: 50px 0px;
+	}
+	.acheivments {
+		padding: 0em 0em 2em;
+	}
+	.social-icn ul li {
+		padding: 0px 8px;
+	}
+	.text-label {
+		padding: 21px 7px;
+	}
+	.map iframe {
+		min-height: 190px;
+	}
+	.pd {
+		float: none;
+		width: 100%;
+	}
+	.adress,.news-letter {
+		margin-bottom: 20px;
+	}
+	.pd h3 {
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+	.adress ul li,.news-letter
