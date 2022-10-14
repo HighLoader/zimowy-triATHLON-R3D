@@ -1038,4 +1038,35 @@ input.nuber {
 		padding: 21px 0px;
 		width: 100%;
 		float: none;
-		text-align: c
+		text-align: center;
+	}
+	.social-icn {
+		width: 100%;
+		float: none;
+		background: #064042;
+		padding: 15px 0px 49px;
+	}
+}
+@media screen and (max-width:320px){
+	.carousel-caption p {
+		padding: 5px 9px;
+	}
+	.carousel-caption {
+		text-align: left;
+		top: 0%;
+		left: 13%;
+	}
+	.wid2 {
+		padding: 0px 15px;
+	}
+	.carousel-caption h3 {
+		width: 109%;
+	}
+	ul.box-shadow {
+		height: 380px;
+	}
+	.menu-grid {
+		margin-top: 10px;
+	}
+	.col-md-4.ser-fet {
+		margin-bottom: 
