@@ -1008,4 +1008,34 @@ input.nuber {
 	}
 	.style-label ul li {
 		margin: 0px 0px 0px;
-		width
+		width: 50%;
+		top: 31px;
+		padding: 0px 7px;
+	}
+	.style-label ul li:nth-child(4) {
+		display: block;
+	}
+	ul.box-shadow {
+		height: 352px;
+	}
+	.label-text p {
+		margin-bottom: 20px;
+	}
+	.col-md-6.fet-pad {
+		width: 100%;
+		float: none;
+		text-align: left;
+	}
+	.gal-alt {
+		width: 100%;
+		float: none;
+		margin: 0px 0px 10px !important;
+	}
+	span.hide-box {
+		padding: 89px 0px;
+	}
+	.text-label {
+		padding: 21px 0px;
+		width: 100%;
+		float: none;
+		text-align: c
