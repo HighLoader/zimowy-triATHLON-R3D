@@ -984,4 +984,28 @@ input.nuber {
 	}
 	.carousel-caption p {
 		font-size: 11px;
+		width: 94%;
+		margin: 0px 0px 5px;
+		padding: 5px 9px;
+	}
+	.carousel-caption {
+		text-align: left;
+		top: 5%;
+		left: 13%;
+	}
+	button.btn.btn-info.sld, button.btn.btn-info.sld:hover {
+		padding: 3px 3px !important;
+		font-size: 10px;
+		width: 26%;
+	}
+	.carousel-indicators .active {
+		width: 8px;
+		height: 8px;
+	}
+	.carousel-indicators li {
+		width: 8px;
+		height: 8px;
+	}
+	.style-label ul li {
+		margin: 0px 0px 0px;
 		width
