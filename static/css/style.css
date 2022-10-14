@@ -1069,4 +1069,30 @@ input.nuber {
 		margin-top: 10px;
 	}
 	.col-md-4.ser-fet {
-		margin-bottom: 
+		margin-bottom: 1em;
+	}
+	.features {
+		margin-top: 20px;
+	}
+	.aim-icn {
+		padding: 12px 12px;
+	}
+	.div-margin {
+		padding-bottom: 0.5em;
+	}
+	span.hide-box {
+		padding: 73px 0px;
+	}
+	.service_features {
+		padding: 0em 0em 1em;
+	}
+	.acheivments {
+		padding: 0em 0em 1em;
+	}
+	.social-icn ul li {
+		padding: 0px 6px;
+	}
+	button.btn.btn-info.sld, button.btn.btn-info.sld:hover {
+		padding: 6px 3px !important;
+		font-size: 10px;
+		w
