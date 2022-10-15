@@ -1095,4 +1095,33 @@ input.nuber {
 	button.btn.btn-info.sld, button.btn.btn-info.sld:hover {
 		padding: 6px 3px !important;
 		font-size: 10px;
-		w
+		width: 33%;
+	}
+	.pd h3 {
+		font-size: 19px;
+	}
+	.caption h4 {
+		font-weight: 300;
+		font-size: 11px;
+	}
+	.caption span {
+		font-size: 0.7em;
+	}
+	.ser-fet {
+		padding: 0;
+	}
+	.pd {
+		padding: 0;
+	}
+	.footer-text h3 a, .footer-text h3 a:hover {
+		font-size: 25px;
+	}
+	.footer-text p {
+		font-size: 12px;
+	}
+	.image-wid img.img-responsive{
+		width:100%;
+		min-height:180px;
+	}
+	#swipebox-slider .slide img {
+		min-height: 119px !import
