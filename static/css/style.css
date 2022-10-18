@@ -1124,4 +1124,7 @@ input.nuber {
 		min-height:180px;
 	}
 	#swipebox-slider .slide img {
-		min-height: 119px !import
+		min-height: 119px !important;
+		min-width: 75% !important;
+	}
+}
