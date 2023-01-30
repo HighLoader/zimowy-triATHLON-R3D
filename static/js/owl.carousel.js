@@ -1036,3 +1036,436 @@ if ( typeof Object.create !== "function" ) {
 						base.currentItem = $.inArray(closest, base.positionsInArray);
 					} else {
 						base.currentItem = i;
+					}
+				} 
+				else if (goal + (base.itemWidth/20) < v && goal + (base.itemWidth/20) > (array[i+1] || array[i]-base.itemWidth) && base.moveDirection() === "right"){
+					if(base.options.scrollPerPage === true){
+						closest = array[i+1] || array[array.length-1];
+						base.currentItem = $.inArray(closest, base.positionsInArray);
+					} else {
+						closest = array[i+1];
+						base.currentItem = i+1;
+					}
+				}
+			});
+			return base.currentItem;
+		},
+
+		moveDirection : function(){
+			var base = this,
+				direction;
+			if(base.newRelativeX < 0 ){
+				direction = "right"
+				base.playDirection = "next"
+			} else {
+				direction = "left"
+				base.playDirection = "prev"
+			}
+			return direction
+		},
+
+		customEvents : function(){
+			var base = this;
+			base.$elem.on("owl.next",function(){
+				base.next();
+			});
+			base.$elem.on("owl.prev",function(){
+				base.prev();
+			});
+			base.$elem.on("owl.play",function(event,speed){
+				base.options.autoPlay = speed;
+				base.play();
+				base.hoverStatus = "play";
+			});
+			base.$elem.on("owl.stop",function(){
+				base.stop();
+				base.hoverStatus = "stop";
+			});
+			base.$elem.on("owl.goTo",function(event,item){
+				base.goTo(item)
+			});
+			base.$elem.on("owl.jumpTo",function(event,item){
+				base.jumpTo(item)
+			});
+		},
+		
+		stopOnHover : function(){
+			var base = this;
+			if(base.options.stopOnHover === true && base.browser.isTouch !== true && base.options.autoPlay !== false){
+				base.$elem.on("mouseover", function(){
+					base.stop();
+				});
+				base.$elem.on("mouseout", function(){
+					if(base.hoverStatus !== "stop"){
+						base.play();
+					}
+				});
+			}
+		},
+
+		lazyLoad : function(){
+			var base = this;
+
+			if(base.options.lazyLoad === false){
+				return false;
+			}
+			for(var i=0; i<base.itemsAmount; i++){
+				var $item = $(base.$owlItems[i]);
+
+				if($item.data("owl-loaded") === "loaded"){
+					continue;
+				}
+
+				var	itemNumber = $item.data("owl-item"),
+					$lazyImg = $item.find(".lazyOwl"),
+					follow;
+
+				if( typeof $lazyImg.data("src") !== "string"){
+					$item.data("owl-loaded","loaded");
+					continue;
+				}				
+				if($item.data("owl-loaded") === undefined){
+					$lazyImg.hide();
+					$item.addClass("loading").data("owl-loaded","checked");
+				}
+				if(base.options.lazyFollow === true){
+					follow = itemNumber >= base.currentItem;
+				} else {
+					follow = true;
+				}
+				if(follow && itemNumber < base.currentItem + base.options.items && $lazyImg.length){
+					base.lazyPreload($item,$lazyImg);
+				}
+			}
+		},
+
+		lazyPreload : function($item,$lazyImg){
+			var base = this,
+				iterations = 0;
+				if ($lazyImg.prop("tagName") === "DIV") {
+					$lazyImg.css("background-image", "url(" + $lazyImg.data("src")+ ")" );
+					var isBackgroundImg=true;
+				} else {
+					$lazyImg[0].src = $lazyImg.data("src");
+				}
+				checkLazyImage();
+
+			function checkLazyImage(){
+				iterations += 1;
+				if (base.completeImg($lazyImg.get(0)) || isBackgroundImg === true) {
+					showImage();
+				} else if(iterations <= 100){//if image loads in less than 10 seconds 
+					setTimeout(checkLazyImage,100);
+				} else {
+					showImage();
+				}
+			}
+			function showImage(){
+				$item.data("owl-loaded", "loaded").removeClass("loading");
+				$lazyImg.removeAttr("data-src");
+				base.options.lazyEffect === "fade" ? $lazyImg.fadeIn(400) : $lazyImg.show();
+				if(typeof base.options.afterLazyLoad === "function") {
+					base.options.afterLazyLoad.apply(this,[base.$elem]);
+				}
+			}
+		},
+
+		autoHeight : function(){
+			var base = this;
+			var $currentimg = $(base.$owlItems[base.currentItem]).find("img");
+
+			if($currentimg.get(0) !== undefined ){
+				var iterations = 0;
+				checkImage();
+			} else {
+				addHeight();
+			}
+			function checkImage(){
+				iterations += 1;
+				if ( base.completeImg($currentimg.get(0)) ) {
+					addHeight();
+				} else if(iterations <= 100){ //if image loads in less than 10 seconds 
+					setTimeout(checkImage,100);
+				} else {
+					base.wrapperOuter.css("height", ""); //Else remove height attribute
+				}
+			}
+
+			function addHeight(){
+				var $currentItem = $(base.$owlItems[base.currentItem]).height();
+				base.wrapperOuter.css("height",$currentItem+"px");
+				if(!base.wrapperOuter.hasClass("autoHeight")){
+					setTimeout(function(){
+						base.wrapperOuter.addClass("autoHeight");
+					},0);
+				}
+			}
+		},
+
+		completeImg : function(img) {
+		    if (!img.complete) {
+		        return false;
+		    }
+		    if (typeof img.naturalWidth !== "undefined" && img.naturalWidth == 0) {
+		        return false;
+		    }
+		    return true;
+		},
+
+		onVisibleItems : function(){
+			var base = this;
+
+			if(base.options.addClassActive === true){
+				base.$owlItems.removeClass("active");
+			}
+			base.visibleItems = [];
+			for(var i=base.currentItem; i<base.currentItem + base.options.items; i++){
+				base.visibleItems.push(i);
+
+				if(base.options.addClassActive === true){
+					$(base.$owlItems[i]).addClass("active");
+				}
+			}
+			base.owl.visibleItems = base.visibleItems;
+		},
+
+		transitionTypes : function(className){
+			var base = this;
+			//Currently available: "fade","backSlide","goDown","fadeUp"
+			base.outClass = "owl-"+className+"-out";
+			base.inClass = "owl-"+className+"-in";
+		},
+
+		singleItemTransition : function(){
+			var base = this;
+			base.isTransition = true;
+
+			var outClass = base.outClass,
+				inClass = base.inClass,
+				$currentItem = base.$owlItems.eq(base.currentItem),
+				$prevItem = base.$owlItems.eq(base.prevItem),
+				prevPos = Math.abs(base.positionsInArray[base.currentItem]) + base.positionsInArray[base.prevItem],
+				origin = Math.abs(base.positionsInArray[base.currentItem])+base.itemWidth/2;
+
+            base.$owlWrapper
+	            .addClass('owl-origin')
+	            .css({
+	            	"-webkit-transform-origin" : origin+"px",
+	            	"-moz-perspective-origin" : origin+"px",
+	            	"perspective-origin" : origin+"px"
+	            });
+	        function transStyles(prevPos,zindex){
+				return {
+					"position" : "relative",
+					"left" : prevPos+"px"
+				};
+			}
+
+	        var animEnd = 'webkitAnimationEnd oAnimationEnd MSAnimationEnd animationend';
+
+			$prevItem
+			.css(transStyles(prevPos,10))
+			.addClass(outClass)
+			.on(animEnd, function() {
+				base.endPrev = true;
+				$prevItem.off(animEnd);
+		    	base.clearTransStyle($prevItem,outClass);
+			});
+
+			$currentItem
+			.addClass(inClass)
+			.on(animEnd, function() {
+				base.endCurrent = true;
+				$currentItem.off(animEnd);
+		    	base.clearTransStyle($currentItem,inClass);
+		    });
+		},
+
+		clearTransStyle : function(item,classToRemove){
+			var base = this;
+			item.css({
+					"position" : "",
+					"left" : ""
+				})
+				.removeClass(classToRemove);
+			if(base.endPrev && base.endCurrent){
+				base.$owlWrapper.removeClass('owl-origin');
+				base.endPrev = false;
+				base.endCurrent = false;
+				base.isTransition = false;
+			}
+		},
+
+		owlStatus : function(){
+			var base = this;
+			base.owl = {
+				"userOptions"	: base.userOptions,
+				"baseElement" 	: base.$elem,
+				"userItems"		: base.$userItems,
+				"owlItems"		: base.$owlItems,
+				"currentItem"	: base.currentItem,
+				"prevItem"		: base.prevItem,
+				"visibleItems"	: base.visibleItems,
+				"isTouch" 		: base.browser.isTouch,
+				"browser"		: base.browser,
+				"dragDirection" : base.dragDirection
+			}
+		},
+
+		clearEvents : function(){
+			var base = this;
+			base.$elem.off(".owl owl mousedown.disableTextSelect");
+			$(document).off(".owl owl");
+			$(window).off("resize", base.resizer);
+		},
+
+		unWrap : function(){
+			var base = this;
+			if(base.$elem.children().length !== 0){
+				base.$owlWrapper.unwrap();
+				base.$userItems.unwrap().unwrap();
+				if(base.owlControls){
+					base.owlControls.remove();
+				}
+			}
+			base.clearEvents();
+			base.$elem
+				.attr("style", base.$elem.data("owl-originalStyles") || "")
+				.attr("class", base.$elem.data("owl-originalClasses"));
+		},
+
+		destroy : function(){
+			var base = this;
+			base.stop();
+			clearInterval(base.checkVisible);
+			base.unWrap();
+			base.$elem.removeData();
+		},
+
+		reinit : function(newOptions){
+			var base = this;
+			var options = $.extend({}, base.userOptions, newOptions);
+		 	base.unWrap();
+		 	base.init(options,base.$elem);
+		},
+
+		addItem : function(htmlString,targetPosition){
+			var base = this,
+				position;
+
+			if(!htmlString){return false}
+
+			if(base.$elem.children().length === 0){
+				base.$elem.append(htmlString);
+				base.setVars();
+				return false;
+			}
+			base.unWrap();
+			if(targetPosition === undefined || targetPosition === -1){
+				position = -1;
+			} else {
+				position = targetPosition;
+			}
+			if(position >= base.$userItems.length || position === -1){
+				base.$userItems.eq(-1).after(htmlString)
+			} else {
+				base.$userItems.eq(position).before(htmlString)
+			}
+
+			base.setVars();
+		},
+
+		removeItem : function(targetPosition){
+			var base = this,
+				position;
+
+			if(base.$elem.children().length === 0){return false}
+			
+			if(targetPosition === undefined || targetPosition === -1){
+				position = -1;
+			} else {
+				position = targetPosition;
+			}
+
+			base.unWrap();
+			base.$userItems.eq(position).remove();
+			base.setVars();
+		}
+
+	};
+
+	$.fn.owlCarousel = function( options ){
+		return this.each(function() {
+			if($(this).data("owl-init") === true){
+				return false;
+			}
+			$(this).data("owl-init", true);
+			var carousel = Object.create( Carousel );
+			carousel.init( options, this );
+			$.data( this, "owlCarousel", carousel );
+		});
+	};
+
+	$.fn.owlCarousel.options = {
+
+		items : 1,
+		itemsCustom : false,
+		itemsDesktop : [1199,4],
+		itemsDesktopSmall : [979,4],
+		itemsTablet : [768,3],
+		itemsTabletSmall : false,
+		itemsMobile : [480,2],
+		singleItem : false,
+		itemsScaleUp : false,
+
+		slideSpeed : 200,
+		paginationSpeed : 800,
+		rewindSpeed : 1000,
+
+		autoPlay : false,
+		stopOnHover : false,
+
+		navigation : false,
+		navigationText : ["prev","next"],
+		rewindNav : true,
+		scrollPerPage : false,
+
+		pagination : true,
+		paginationNumbers : false,
+
+		responsive : true,
+		responsiveRefreshRate : 200,
+		responsiveBaseWidth	: window,
+		
+
+		baseClass : "owl-carousel",
+		theme : "owl-theme",
+
+		lazyLoad : false,
+		lazyFollow : true,
+		lazyEffect : "fade",
+
+		autoHeight : false,
+
+		jsonPath : false,
+		jsonSuccess : false,
+
+		dragBeforeAnimFinish : true,
+		mouseDrag : true,
+		touchDrag : true,
+
+		addClassActive : false,
+		transitionStyle : false,
+
+		beforeUpdate : false,
+		afterUpdate : false,
+		beforeInit : false,
+		afterInit : false,
+		beforeMove : false,
+		afterMove : false,
+		afterAction : false,
+		startDragging : false,
+		afterLazyLoad: false
+		
+	};
+})( jQuery, window, document );
