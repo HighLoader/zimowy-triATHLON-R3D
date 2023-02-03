@@ -1,1 +1,12 @@
-{% ext
+{% extends "layout.html" %}
+			
+{% block body %}
+				<!-- Wrapper for slides -->
+				<div>
+					<div class="item active  image-wid">
+					<img src="{{ url_for('static', filename='images/1z.jpg') }}" alt="..." class="img-responsive"> 
+					<div class="carousel-caption">
+					
+				       <div class="row mainbox col-md-3 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					    <form action="{{url_for('signin')}}" method="POST">
+								 
