@@ -1,0 +1,105 @@
+
+{% extends "layout.html" %}
+			
+{% block body %}
+				
+         <script>
+		
+ $(document).on('click', '#selfHelpBtn', function(e){ 
+	 e.preventDefault();
+						var strWindowFeatures = "menubar=no,location=no,resizable=yes,titlebar=no,scrollbars=yes,status=no,width=600";
+						var myWindow=window.open('https://experience.aptean.com/sdccommon/asp/salview.asp?ssfromlink=true&sprt_cid=63dfce99-4417-490d-8180-6f87a76b4904&sprt_verb=prevew','_blank',strWindowFeatures);
+          });
+
+    $(document).ready(function() {
+
+					
+					$("#getcatg").click(function(e){
+							  e.preventDefault();
+							  var $colist = $('#catoptionlist'); 
+							   $colist.empty();
+							  var tmp = $("#tktdesc").val();
+														console.log(tmp);
+																		  if (tmp.search('Internet Explorer')>= 0)
+																			{
+																		     console.log('there');
+														                      $colist.append("<button type='button' id='selfHelpBtn' class='btn btn-primary'>IE Self-Help</button>");
+
+																			}
+										$.ajax({type: "POST",
+												url: "/getcats",
+												dataType: 'json',
+												contentType: "application/json",
+												data: JSON.stringify({ doc: $("#tktdesc").val(), botName:'UCSFFull'}),
+												success:function(result){
+													   //console.log(result);
+													   response = $.parseJSON(result);
+													  
+													    
+
+													   //console.log(response);
+													  // console.log(response.result[0].Group);
+														$(function() {
+																		$.each(response.result, function(i, item) {
+                                                                          
+																		  if(item.Group=='Password Reset')
+																			{
+																			  var lis = $('<li>Password Reset - Self Service</li>')
+																			  lis.append($('<input>').attr('type', 'radio').attr('name','optCategory').attr('value', 'Password Reset - Self Service'));
+																			  $colist.append(lis); 
+																			}
+
+																		  var lis = $('<li>'+item.Group+'</li>')
+																		  lis.append($('<input>').attr('type', 'radio').attr('name','optCategory').attr('value', item.Group));
+																		  $colist.append(lis); 
+																																
+																			//$colist.append($('<option>').text(item.Group).attr('value', item.Group));
+																		});
+																	
+														 });
+
+											  }
+									  });
+
+                    });
+				 });
+         </script>
+
+
+	 <div class="acheivments" id="newticket">
+			 
+
+		 
+		        <div class="container">
+							<div class="col-lg-9 col-md-9 col-sm-9">
+						   
+								<form action="{{url_for('createtkt')}}" method="POST">
+								   
+									<div class="form-group col-lg-12 col-md-12 col-sm-12">
+										<br>
+										<br>
+										<br>
+										<br>
+										<br>
+										<br>
+										<h3>எனைத்தென் படுவை அறியாமை கண்ணிலன்
+										</h3> <br><h3> யாதொன்றும் ஆற்றும் தரும்
+										</h3> <small>  [Current Week]</small>
+										<br>
+										<br>
+										<label>க௰ற்றியார்க்கு இல்லைபோல் கற்றறிந் தான்பிறந்த
+                                       </label><br><label>இன்சொலால் ஈன்று படும் </label> <small> [Week-2]</small>
+									   <br>
+									   <br>
+										<label>பேணாது பெட்பவழ் கெல்லாம் சிறத்தகை
+                                        </label><br><label>வில்லார்க்கும் வாஃத தூர.</label> <small> [Week-1]</small>
+									   <br>
+ 										<br>
+										
+									</div>
+					  							   
+									
+								</form>
+								<br><h5>Author:Tamilselvan Subramanian  <h5><br>
+								<a href="https://in.linkedin.com/in/tsubraman">LinkedIn</a>
+								<br><a href="mailto:tamilselvan@gmail.com">Email</a>
