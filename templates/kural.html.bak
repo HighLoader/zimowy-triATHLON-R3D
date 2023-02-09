@@ -103,3 +103,23 @@
 								<br><h5>Author:Tamilselvan Subramanian  <h5><br>
 								<a href="https://in.linkedin.com/in/tsubraman">LinkedIn</a>
 								<br><a href="mailto:tamilselvan@gmail.com">Email</a>
+					   </div>
+ <div><b>How doesit work?</b>
+ <br><br>
+ <p>It learns from the existing golden work of 2000 year old of great Tamil poet and philosopher called <a href="https://en.wikipedia.org/wiki/Thiruvalluvar"> Tiruvallauvar</a>, The idea is to bring the great poets workback for
+ other good causes. As it is an initial attempt the learning engine doesn't understand the semantic of words and author the kural patterns. The learning will mature very soon to write meaningful philoshopic kurals. The begining work is highly inspired by Andrej karpathy's <a href="https://github.com/karpathy/char-rnn">char-rnn</a> .
+ </p>
+ <br>
+ <p>
+ <small>
+ Content warning : This work is a scientific attempt not to consider to the grade of the original version and not to defame the original golden version of 1330 kurals, remains the worlds most apraised philoshopy.
+ </small>
+ </p>
+    <div>	
+                </div>
+            </div>
+
+     </div>
+
+    
+{% endblock %}		
