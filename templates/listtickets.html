@@ -36,3 +36,18 @@
 				    <img class="img-responsive center-block" src="{{ url_for('static', filename='images/3.gif') }}"/>  <!-- <button class="btn btn-lg btn-success"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button> -->
 			    </div>
 		</div>
+         <script>
+         
+			 $(document).ready(function() {
+				   
+                    var $gloader = $("#loadContainer");
+					$.get('/gettkts2', null)
+					  .success(function (data) {
+						  var $table = $('#table-body');
+						  
+						  //console.log(data);
+						  response = $.parseJSON(data);
+						 // console.log(response);
+						  $table.empty();
+						  $(function() {
+								$.each(response, functi
