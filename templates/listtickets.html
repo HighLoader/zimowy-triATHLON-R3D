@@ -50,4 +50,19 @@
 						 // console.log(response);
 						  $table.empty();
 						  $(function() {
-								$.each(response, functi
+								$.each(response, function(i, item2) {
+								$.each(item2, function(i, item) {
+									console.log(item);
+									var stateString="";
+									switch (item.state) {
+										case '1':
+											stateString = "New";
+											break;
+										case '2':
+											stateString = "Active";
+											break;
+										case '3':
+											stateString = "Awaiting Problem";
+											break;
+										case '4':
+											stateString = "Aw
