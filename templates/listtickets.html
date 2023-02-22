@@ -81,4 +81,24 @@
 											break;
 									    default: 
 										    stateString = "Unknown";
-						
+									}
+									if(item.short_description.length>2)
+									{
+										var $tr = $('<tr>').append(
+											$('<td>').text(item.number),
+											$('<td>').text(item.short_description),
+											$('<td>').text(item.category),
+											$('<td>').text(stateString)
+										).appendTo($table);
+									//console.log($tr.wrap('<p>').html());
+									}
+								});
+							$gloader.hide();
+					      }); });
+ 
+			           });
+
+					   
+
+					
+  
