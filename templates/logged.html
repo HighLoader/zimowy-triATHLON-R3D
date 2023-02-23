@@ -84,4 +84,20 @@
          
 			 $(document).ready(function() {
 				   
-                    var $gloader = $(
+                    var $gloader = $("#loadContainer");
+					$.get('/gettkts', null)
+					  .success(function (data) {
+						  var $table = $('#table-body');
+						  
+						  //console.log(data);
+						  response = $.parseJSON(data);
+						  //console.log(response);
+						  $table.empty();
+						  $(function() {
+								$.each(response, function(i, item) {
+									
+									var stateString="";
+									switch (item.state) {
+										case '1':
+											stateString = "New";
+								
