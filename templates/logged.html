@@ -116,4 +116,18 @@
 										case '6':
 											stateString = "Resolved";
 											break;
-						
+										case '7':
+											stateString = "Closed";
+											break;
+										case '8':
+											stateString = "Work in Progress";
+											break;
+									    default: 
+										    stateString = "Unknown";
+									}
+									if(item.short_description.length>2)
+									{
+										var $tr = $('<tr>').append(
+											$('<td>').text(item.number),
+											$('<td>').text(item.short_description),
+											$(
