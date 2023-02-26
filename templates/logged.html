@@ -157,4 +157,10 @@
                                            $colist.empty();
 										   //console.log(response);
  										  // console.log(response.result[0].Group);
-										    $(functi
+										    $(function() {
+															$.each(response.result, function(i, item) {
+                                                              if(item.Group=='Password Reset')
+																{
+																  var lis = $('<li>Password Reset - Self Service</li>')
+																  lis.append($('<input>').attr('type', 'radio').attr('name','optCategory').attr('value', 'Password Reset - Self Service'));
+													
