@@ -163,4 +163,12 @@
 																{
 																  var lis = $('<li>Password Reset - Self Service</li>')
 																  lis.append($('<input>').attr('type', 'radio').attr('name','optCategory').attr('value', 'Password Reset - Self Service'));
-													
+																  $colist.append(lis); 
+																}
+
+                                                              var lis = $('<li>'+item.Group+'</li>')
+															  lis.append($('<input>').attr('type', 'radio').attr('name','optCategory').attr('value', item.Group));
+														      $colist.append(lis); 
+																													
+																//$colist.append($('<option>').text(item.Group).attr('value', item.Group));
+	
