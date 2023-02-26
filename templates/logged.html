@@ -148,4 +148,13 @@
 							  var $colist = $('#catoptionlist'); 
 							$.ajax({type: "POST",
 									url: "/getcats",
-                                    dat
+                                    dataType: 'json',
+									contentType: "application/json",
+									data: JSON.stringify({ doc: $("#tktdesc").val(), botName:'UCSFSmall'}),
+									success:function(result){
+										   //console.log(result);
+							               response = $.parseJSON(result);
+                                           $colist.empty();
+										   //console.log(response);
+ 										  // console.log(response.result[0].Group);
+										    $(functi
