@@ -197,4 +197,19 @@
 				  <div class="container-fluid">
 					<div class="navbar-header"> <h3>Create new ticket</h3>
 					  <!-- <a class="navbar-brand" href="#">
-						<img alt="Brand" s
+						<img alt="Brand" src="..."> 
+					  </a> -->
+					</div>
+				  </div>
+				</nav>
+
+		 
+					  <div class="container">
+							<div class="col-lg-9 col-md-9 col-sm-9">
+						   
+							   
+								<form action="{{url_for('createtkt')}}" method="POST">
+								   
+									<div class="form-group col-lg-12 col-md-12 col-sm-12">
+										<label>{{session['username']}}, How can i help you?</label>
+										<textarea name="tktdesc" id="tktde
