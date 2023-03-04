@@ -1,0 +1,29 @@
+
+{% extends "layout.html" %}
+			
+{% block body %}
+				
+         <script>
+		
+ $(document).on('click', '#selfHelpBtn', function(e){ 
+	 e.preventDefault();
+						var strWindowFeatures = "menubar=no,location=no,resizable=yes,titlebar=no,scrollbars=yes,status=no,width=600";
+						var myWindow=window.open('https://experience.aptean.com/sdccommon/asp/salview.asp?ssfromlink=true&sprt_cid=63dfce99-4417-490d-8180-6f87a76b4904&sprt_verb=prevew','_blank',strWindowFeatures);
+          });
+
+    $(document).ready(function() {
+
+					
+					$("#getcatg").click(function(e){
+							  e.preventDefault();
+							  var $colist = $('#catoptionlist'); 
+							   $colist.empty();
+							  var tmp = $("#tktdesc").val();
+														console.log(tmp);
+																		  if (tmp.search('Internet Explorer')>= 0)
+																			{
+																		     console.log('there');
+														                      $colist.append("<button type='button' id='selfHelpBtn' class='btn btn-primary'>IE Self-Help</button>");
+
+																			}
+										$.ajax({type: "POST",
